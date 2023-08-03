@@ -1,60 +1,54 @@
-import 'package:empower_u/screens/signupscreen.dart';
+import 'package:empower_u/screens/signinbuyer.dart';
+import 'package:empower_u/screens/signinseller.dart';
 import 'package:flutter/material.dart';
 
 
-import 'loginscreen.dart';
-
-class EmpowerU extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'EmpowerU',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: WelcomeScreen(),
-    );
-  }
-}
 
 class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('EmpowerU'),
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
+            Image.asset('assets/images/app_logo.jpeg', width: 200, height: 200), 
+            SizedBox(height: 20),
             Text(
-              'Welcome to EmpowerU',
-              style: TextStyle(
-                fontSize: 24.0,
-                fontWeight: FontWeight.bold,
+              'Welcome!',
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 50),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SignInBuyer(),
+                  ),
+                );
+              },
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20), // Adjust the button size here
+                backgroundColor: Colors.indigo.shade900, // Set the button color to indigo shade 900
               ),
+              child: Text('Continue as Buyer',style: TextStyle(fontWeight: FontWeight.bold),),
             ),
-            
-            SizedBox(height: 32.0),
+            SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-              Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const SignIn()),
-  );
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => SignInSeller(),
+                  ),
+                );
               },
-              child: Text('Login'),
-            ),
-            SizedBox(height: 16.0),
-            ElevatedButton(
-              onPressed: () {
-              Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => const SignIn()),
-  );
-              },
-              child: Text('SignUp'),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20), // Adjust the button size here
+                backgroundColor: Colors.indigo.shade900, // Set the button color to indigo shade 900
+              ),
+              child: Text('Continue as Seller',style: TextStyle(fontWeight: FontWeight.bold),),
             ),
           ],
         ),

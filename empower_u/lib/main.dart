@@ -1,5 +1,5 @@
-import 'package:empower_u/screens/loginscreen.dart';
-import 'package:empower_u/screens/signupscreen.dart';
+import 'package:empower_u/screens/signinbuyer.dart';
+import 'package:empower_u/screens/signinseller.dart';
 import 'package:empower_u/screens/splash_screen.dart';
 import 'package:empower_u/screens/welcomescreen.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +22,8 @@ class MyApp extends StatelessWidget {
        initialRoute: 'splash_screen',
       routes: {
         'welcomescreen':(context)=>  WelcomeScreen(),
-        'loginscreen': (context) => const SignIn(),
-        'signupscreen': (context) =>  const SignUp(),
+        'loginscreen': (context) => SignInSeller(),
+        'signupscreen': (context) =>   SignInBuyer(),
         'splash_screen': (context) => const SplashScreen(),
         // 'home_screen': (context) =>  MobileScreenLayout(),
         // 'profile': (context) => ProfilePage(),
