@@ -16,16 +16,16 @@ class SignUpBuyer extends StatelessWidget {
         ),
         backgroundColor: Colors.indigo.shade900,
       ),
-      body: SingleChildScrollView( 
-        child: Center( 
+      body: SingleChildScrollView(
+        child: Center(
           child: Padding(
-            padding: const EdgeInsets.fromLTRB(16, 100, 16, 80), 
+            padding: const EdgeInsets.fromLTRB(16, 100, 16, 80),
             child: Column(
               children: [
                 Image.asset(
-                  'assets/images/app_logo.jpeg', 
+                  'assets/images/app_logo.jpeg',
                   width: 150,
-                  height: 150, 
+                  height: 150,
                 ),
                 SizedBox(height: 20),
                 Text(
@@ -39,7 +39,7 @@ class SignUpBuyer extends StatelessWidget {
                 SizedBox(height: 40),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  width: 500, 
+                  width: 500,
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.indigo.shade900,
@@ -49,7 +49,7 @@ class SignUpBuyer extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.email, color: Colors.indigo.shade900), 
+                      Icon(Icons.email, color: Colors.indigo.shade900),
                       SizedBox(width: 10),
                       Expanded(
                         flex: 1, // Set flex to 1 to make the width equal
@@ -66,7 +66,7 @@ class SignUpBuyer extends StatelessWidget {
                 SizedBox(height: 20),
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 16.0),
-                  width: 500, 
+                  width: 500,
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.indigo.shade900,
@@ -76,7 +76,7 @@ class SignUpBuyer extends StatelessWidget {
                   ),
                   child: Row(
                     children: [
-                      Icon(Icons.lock, color: Colors.indigo.shade900), 
+                      Icon(Icons.lock, color: Colors.indigo.shade900),
                       SizedBox(width: 10),
                       Expanded(
                         flex: 1, // Set flex to 1 to make the width equal
@@ -96,6 +96,7 @@ class SignUpBuyer extends StatelessWidget {
                   onPressed: () {
                     // Add  sign-up logic later
                     //just add navigator push for now
+                    Navigator.pushNamed(context, 'buyer_home');
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.indigo.shade900,
