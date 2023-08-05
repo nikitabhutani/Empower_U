@@ -1,3 +1,4 @@
+import 'package:empower_u/screens/sellerHome.dart';
 import 'package:empower_u/screens/signupseller.dart';
 import 'package:flutter/material.dart';
 
@@ -98,9 +99,15 @@ class SignInSeller extends StatelessWidget {
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      // Form is valid, add your login logic here
-                    }
+                    // if (_formKey.currentState!.validate()) {
+                    //   // Form is valid, add your login logic here
+                    // }
+                   Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => SellerHomePageContent(),
+                      ),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.indigo.shade900,

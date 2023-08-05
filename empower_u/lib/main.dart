@@ -3,6 +3,7 @@ import 'package:empower_u/screens/signinbuyer.dart';
 import 'package:empower_u/screens/signinseller.dart';
 import 'package:empower_u/screens/splash_screen.dart';
 import 'package:empower_u/screens/welcomescreen.dart';
+import 'package:empower_u/screens/yourcart.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -20,14 +21,14 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: ThemeMode.system,
-      home: BuyerHome(),
-      // initialRoute: 'splash_screen',
-      // routes: {
-      //   'welcomescreen': (context) => WelcomeScreen(),
-      //   'loginscreen': (context) => SignInSeller(),
-      //   'signupscreen': (context) => SignInBuyer(),
-      //   'splash_screen': (context) => const SplashScreen(),
-      //   'buyer_home': (context) => const BuyerHome(),
+      initialRoute: 'splash_screen',
+      routes: {
+        'welcomescreen': (context) => WelcomeScreen(),
+        'loginscreen': (context) => SignInSeller(),
+        'signupscreen': (context) => SignInBuyer(),
+        'splash_screen': (context) => const SplashScreen(),
+        'buyer_home': (context) =>  BuyerHome(),
+       // 'yourcart': (context) =>  CartPage(selectedArtworks),
       //   // 'home_screen': (context) =>  MobileScreenLayout(),
       //   // 'profile': (context) => ProfilePage(),
       //   // 'aboutus': (context) => AboutUsPage(),
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       //   // 'buyart': (context) => BuyArtPage(),
       //   // 'search': (context) => SearchPage(),
       //   // 'singing': (context) => SingingPage(),
-      // },
+       },
     );
   }
 }
