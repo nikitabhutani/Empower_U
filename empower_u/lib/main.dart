@@ -1,3 +1,4 @@
+import 'package:empower_u/screens/buyerHome.dart';
 import 'package:empower_u/screens/signinbuyer.dart';
 import 'package:empower_u/screens/signinseller.dart';
 import 'package:empower_u/screens/splash_screen.dart';
@@ -19,22 +20,22 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.light),
       darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: ThemeMode.system,
-       initialRoute: 'splash_screen',
-      routes: {
-        'welcomescreen':(context)=>  WelcomeScreen(),
-        'loginscreen': (context) => SignInSeller(),
-        'signupscreen': (context) =>   SignInBuyer(),
-        'splash_screen': (context) => const SplashScreen(),
-        // 'home_screen': (context) =>  MobileScreenLayout(),
-        // 'profile': (context) => ProfilePage(),
-        // 'aboutus': (context) => AboutUsPage(),
-        // 'yourcart': (context) => CartPage(),
-        // 'buyart': (context) => BuyArtPage(),
-        // 'search': (context) => SearchPage(),
-        // 'singing': (context) => SingingPage(),
-      },
+      home: BuyerHome(),
+      // initialRoute: 'splash_screen',
+      // routes: {
+      //   'welcomescreen': (context) => WelcomeScreen(),
+      //   'loginscreen': (context) => SignInSeller(),
+      //   'signupscreen': (context) => SignInBuyer(),
+      //   'splash_screen': (context) => const SplashScreen(),
+      //   'buyer_home': (context) => const BuyerHome(),
+      //   // 'home_screen': (context) =>  MobileScreenLayout(),
+      //   // 'profile': (context) => ProfilePage(),
+      //   // 'aboutus': (context) => AboutUsPage(),
+      //   // 'yourcart': (context) => CartPage(),
+      //   // 'buyart': (context) => BuyArtPage(),
+      //   // 'search': (context) => SearchPage(),
+      //   // 'singing': (context) => SingingPage(),
+      // },
     );
   }
 }
-
- 
